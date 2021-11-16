@@ -1,0 +1,25 @@
+html {
+  font-family: sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.loader {
+  display: none;
+  margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    flex-direction: row;
+  }
+  main > * {
+    padding: 1rem;
+    flex-basis: 50%;
+  }
+}
+.song blockquote {
+  white-space: pre-wrap;
+}

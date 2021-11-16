@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Music Page - Daniela Tellez Morales</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+              <img
+                src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
+                height="15"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Music Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Artistas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Canciones</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+
+          <!-- Right elements -->
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+              <i class="fas fa-headphones"></i>
+            </a>
+
+            <!-- Notifications -->
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger"
+                >9+</span
+              >
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Nueva notificacion</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Otra nueva notificacion</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Otra nueva notificacion</a>
+              </li>
+            </ul>
+
+            <!-- Avatar -->
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                class="rounded-circle"
+                height="25"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Mi perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Ajustes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="index.html">Salir</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+
+      <!-- Background image -->
+      <div
+        class="p-5 text-center bg-image"
+        style="
+          background-image: url('https://www.lavanguardia.com/files/og_thumbnail/uploads/2018/06/21/5fa52e18ed2b0.jpeg');
+          height: 600px;
+        "
+      >
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Music Page</h1>
+              <h4 class="mb-3">
+                Informacion sobre tus artistas y canciones con un solo click
+              </h4>
+              <a class="btn btn-outline-light btn-lg" href="#!" role="button"
+                >Muestrame mas</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Background image -->
+    </header>
+    <hr />
+
+    <div class="container-md">
+      <div class="row text-center">
+        <div class="text-black">
+          <h1 class="mb-3">Sobre nosotros...</h1>
+          <div class="container-sm">
+            <div class="col-md">
+              <p class="mb-1">
+                Este es un texto de prueba, nos sirve para maquetar y hacer la
+                diferencia para notar que tan grande puede ser el texto puesto
+                en este lugar.
+              </p>
+              <p>
+                Generalmente se utilizan textos largos generados automaticamente
+                por extenciones o sitios web que se dedican al relleno de
+                espacios vacios con palabras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('https://los40.com/los40/imagenes/2021/06/21/musica/1624241130_286797_1624241867_gigante_normal.jpg');
+        height: 200px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Siempre presentes...</h1>
+            <div class="container-sm">
+              <div class="col-sm">
+                <p class="mb-1">
+                  Este es un texto de prueba, nos sirve para maquetar y hacer la
+                  diferencia para notar que tan grande puede ser el texto puesto
+                  en este lugar.
+                </p>
+                <p>
+                  Generalmente se utilizan textos largos generados
+                  automaticamente por extenciones o sitios web que se dedican al
+                  relleno de espacios vacios con palabras.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="container-md">
+      <div class="row bg-light">
+        <div class="row text-black text-center">
+          <h1 class="mb3">Artistas</h1>
+          <br /><br /><br />
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('https://latinwmg.com/wp-content/uploads/2019/04/musica_electronica.jpg');
+        height: 200px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Gracias por tu preferencia</h1>
+            <div class="container-sm">
+              <div class="col-sm">
+                <p class="mb-1">
+                  Este es un texto de prueba, nos sirve para maquetar y hacer la
+                  diferencia para notar que tan grande puede ser el texto puesto
+                  en este lugar.
+                </p>
+                <p>
+                  Generalmente se utilizan textos largos generados
+                  automaticamente por extenciones o sitios web que se dedican al
+                  relleno de espacios vacios con palabras.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="container-md">
+      <div class="row text-center align-content-center">
+        <div class="text-black">
+          <h1 class="mb-3">Buscador musical</h1>
+          <div class="container-sm">
+            <div class="row">
+              <div class="col-sm">
+                <p class="mb-1">
+                  Este es un texto de prueba, nos sirve para maquetar y hacer la
+                  diferencia para notar que tan grande puede ser el texto puesto
+                  en este lugar.
+                </p>
+                <p>
+                  Generalmente se utilizan textos largos generados
+                  automaticamente por extenciones o sitios web que se dedican al
+                  relleno de espacios vacios con palabras.
+                </p>
+              </div>
+            </div>
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-md-6">
+                <form id="song-search">
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      name="artist"
+                      id="form1Example1"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="form1Example1"
+                      >Artista</label
+                    >
+                  </div>
+
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      name="song"
+                      id="form1Example2"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="form1Example2"
+                      >Cancion</label
+                    >
+                  </div>
+
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Buscar
+                  </button>
+                </form>
+                <img
+                  class="loader"
+                  src="assets/images/loader.svg"
+                  alt="Cargando..."
+                />
+                <aside class="error"></aside>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            <br />
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="mb-3">Informacion del artista</h2>
+                <div class="artist"></div>
+              </div>
+              <div class="col-md-6">
+                <h2 class="mb-3">Informacion de la cancion</h2>
+                <div class="song"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('https://trabajarporelmundo.org/wp-content/uploads/2021/01/descargar-mu%CC%81sica-gratis-sin-copyright-1.jpg');
+        height: 200px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">
+              Universidad Texnologica de Xicotepec de Juarez Puebla
+            </h1>
+            <div class="container-sm">
+              <div class="col-sm">
+                <p class="mb-1">
+                  Este es un texto de prueba, nos sirve para maquetar y hacer la
+                  diferencia para notar que tan grande puede ser el texto puesto
+                  en este lugar.
+                </p>
+                <p>
+                  Generalmente se utilizan textos largos generados
+                  automaticamente por extenciones o sitios web que se dedican al
+                  relleno de espacios vacios con palabras.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <section
+        class="
+          d-flex
+          justify-content-center justify-content-lg-between
+          p-4
+          border-bottom
+        "
+      >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span
+            >Ponte en contacto con nosotros en nuestras redes sociales:</span
+          >
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Universidad Tecnologica de
+                Xicotepec de Juarez
+              </h6>
+              <p>
+                Este texto esta dise&ntilde;ado especialmente para maquetar y
+                hacer espacio en donde no hay ningun texto que sea de
+                relevancia. Esto es completamente aleatorio y no tienen nada.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Productos</h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Links extra</h6>
+              <p>
+                <a href="#!" class="text-reset">Presentacion</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Configuracion</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Ordenes</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Ayuda</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contactame</h6>
+              <p>
+                <i class="fas fa-home me-3"></i> Xicotepec de Juarez, Puebla
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                daniela.tellez@utxicotepec.edu.mx
+              </p>
+              <p><i class="fas fa-phone me-3"></i> +52 764 102 1232</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="">Daniela Tellez Morales</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- JavaScript -->
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
