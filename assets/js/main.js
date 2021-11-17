@@ -1,20 +1,44 @@
+let newServiceWorker;
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
-    navigator.serviceWorker.register("../../service-worker.js").then(
-      function (registration) {
-        // Registration was successful
-        console.log(
-          "ServiceWorker registration successful with scope: ",
-          registration.scope
-        );
-      },
-      function (err) {
-        // registration failed :(
-        console.log("ServiceWorker registration failed: ", err);
-      }
-    );
+    navigator.serviceWorker
+      .register("../../service-worker.js")
+      .then((registerEvent) => {
+        registerEvent.addEventListener("updatefound", () => {
+          newServiceWorker = registerEvent.installing;
+
+          newServiceWorker.addEventListener("statechange", () => {
+            /* if (newServiveWorker.state === 'installed') {
+
+            } */
+
+            switch (newServiceWorker.state) {
+              case "installed":
+                showSnackbarUpdate();
+                break;
+            }
+          });
+        });
+      });
   });
 }
+
+function showSnackbarUpdate() {
+  // Get the snackbar DIV
+  let x = document.getElementById("snackbar");
+
+  // Add the "show" class to DIV
+  x.className = "show";
+}
+
+let launchUpdate = document.getElementById("launchUpdate");
+launchUpdate.addEventListener("click", () => {
+  newServiceWorker.postMessage({
+    action: "skipWaiting",
+  });
+  window.reload();
+});
 
 const d = document,
   $form = d.getElementById("song-search"),

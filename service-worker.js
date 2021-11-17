@@ -1,7 +1,6 @@
-var cache_daniela_tellez = "cache-v1-daniela";
+var cache_daniela_tellez = "cache-v3-daniela";
 
 var urlAppShell = [
-  "https://latinwmg.com/wp-content/uploads/2019/04/musica_electronica.jpg",
   "index.html",
   "LICENSE",
   "assets/js/main.js",
@@ -74,15 +73,25 @@ self.addEventListener("fetch", (event) => {
 //Estrategia para actualizar el cache
 
 self.addEventListener("activate", (event) => {
+  console.log("Activado");
   event.waitUntil(
     caches.keys().then((resCache) =>
       Promise.all(
         resCache.map((resCache) => {
-          if (!cache_daniela_tellez.includes(resCache)) {
+          if (!resCache.includes(cache_daniela_tellez)) {
+            console.log("Cache borrado");
             return caches.delete(resCache);
           }
         })
       )
     )
   );
+});
+
+
+
+self.addEventListener("message", (msgClient) => {
+  if (msgClient.data.action == "skipWaiting") {
+    self.skipWaiting();
+  }
 });
