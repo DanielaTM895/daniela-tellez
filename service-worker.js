@@ -1,21 +1,32 @@
-var cache_daniela_tellez = "cache-v3-daniela";
-
-var urlAppShell = [
-  "index.html",
-  "LICENSE",
-  "assets/js/main.js",
-  "assets/images/loader.svg",
-];
+var cacheStatic = "cache-static-v1-danielat";
+var cacheDimanyc = "cache-dinamyc-v1-danielat";
+var cacheInmutable = "cache-inmutable-v1-danielat";
 
 self.addEventListener("install", function (event) {
   console.log("install SW");
+  const files = [
+    "index.html",
+    "LICENSE",
+    "assets/js/main.js",
+    "assets/images/loader.svg",
+    "assets/images/piano.jpg",
+    "assets/images/piano2.jpg",
+    "assets/images/audifonos.jpg",
+  ];
+  const inmutable_files = [
+    "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js",
+  ];
 
-  const _openCache = async () => {
-    const _appShellStorage = await caches.open(cache_daniela_tellez);
-    return _appShellStorage.addAll(urlAppShell);
-  };
+  const guardarCacheStatic = caches
+    .open(cacheStatic)
+    .then((cache) => cache.addAll(files));
 
-  event.waitUntil(_openCache());
+  const guardarCacheInmutable = caches
+    .open(cacheInmutable)
+    .then((cache) => cache.addAll(inmutable_files));
+
+  event.waitUntil(Promise.all([guardarCacheStatic, guardarCacheInmutable]));
 });
 
 //1. Cache Only
@@ -78,7 +89,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((resCache) =>
       Promise.all(
         resCache.map((resCache) => {
-          if (!resCache.includes(cache_daniela_tellez)) {
+          if (!resCache.includes(cacheStatic)) {
             console.log("Cache borrado");
             return caches.delete(resCache);
           }
@@ -88,7 +99,22 @@ self.addEventListener("activate", (event) => {
   );
 });
 
+//First cache with backup
 
+/* self.addEventListener("fetch", (event) => {
+  const resultado = caches.match(event.request).then((respuestaCache) => {
+    return (
+      respuestaCache ||
+      fetch(event.request).then((respuestaRed) => {
+        caches.open(cacheDimanyc).then((cache) => {
+          cache.put(event.request, respuestaRed.clone());
+          return respuestaRed;
+        });
+      })
+    );
+  });
+  event.respondWith(resultado);
+}); */
 
 self.addEventListener("message", (msgClient) => {
   if (msgClient.data.action == "skipWaiting") {
