@@ -1,6 +1,7 @@
 var cache_daniela_tellez = "cache-v1-daniela";
 
 var urlAppShell = [
+  "https://latinwmg.com/wp-content/uploads/2019/04/musica_electronica.jpg",
   "index.html",
   "LICENSE",
   "assets/js/main.js",
