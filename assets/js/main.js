@@ -64,7 +64,7 @@ $form.addEventListener("submit", async (e) => {
                   artist.strWebsite
                 }" target="_blank" > Sitio Web<a/>
                 <p>
-                    ${artist.strBiographyEN} 
+                    ${artist.strBiographyES} 
                 </p>
             `;
     }
@@ -83,7 +83,7 @@ $form.addEventListener("submit", async (e) => {
     $song.innerHTML = $songTemplate;
   } catch (err) {
     console.log(err);
-    let message = err.statusText || "Ocurrio un error";
+    let message = err.statusText || "Error ";
     $error.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
     $loader.style.display = "none";
   }

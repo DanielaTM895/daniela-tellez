@@ -26,7 +26,7 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
     ></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Music Page - Daniela Tellez Morales</title>
   </head>
@@ -201,10 +201,10 @@
     <hr />
 
     <div
-      class="p-5 text-center bg-image"
+      class="p-5 text-center bg-image d-flex"
       style="
         background-image: url('https://los40.com/los40/imagenes/2021/06/21/musica/1624241130_286797_1624241867_gigante_normal.jpg');
-        height: 200px;
+        height: 400px;
       "
     >
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
@@ -239,76 +239,70 @@
         </div>
         <div class="col-md-4">
           <div class="card" style="width: 18rem">
-            <img
-              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            <div class="card-img-top" alt="..." id="imagen1"></div>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
+              <h5 class="card-title" id="artista1">Card title</h5>
+              <p class="card-text" id="descripcion1">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item" id="aniovida1">Cras justo odio</li>
+              <li class="list-group-item" id="aniomuerte1">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item" id="estilo1">Vestibulum at eros</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a href="#" class="card-link" id="genero1">Card link</a>
+              <a href="#" class="card-link">Ver mas</a>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="card" style="width: 18rem">
-            <img
-              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            <div class="card-img-top" alt="..." id="imagen2"></div>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
+              <h5 class="card-title" id="artista2">Card title</h5>
+              <p class="card-text" id="descripcion2">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item" id="aniovida2">Cras justo odio</li>
+              <li class="list-group-item" id="aniomuerte2">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item" id="estilo2">Vestibulum at eros</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a href="#" class="card-link" id="genero2">Card link</a>
+              <a href="#" class="card-link">Ver mas</a>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="card" style="width: 18rem">
-            <img
-              src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            <div class="card-img-top" alt="..." id="imagen3"></div>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
+              <h5 class="card-title" id="artista3">Card title</h5>
+              <p class="card-text" id="descripcion3">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item" id="aniovida3">Cras justo odio</li>
+              <li class="list-group-item" id="aniomuerte3">
+                Dapibus ac facilisis in
+              </li>
+              <li class="list-group-item" id="estilo3">Vestibulum at eros</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a href="#" class="card-link" id="genero3">Card link</a>
+              <a href="#" class="card-link">Ver mas</a>
             </div>
           </div>
         </div>
@@ -321,7 +315,7 @@
       class="p-5 text-center bg-image"
       style="
         background-image: url('https://latinwmg.com/wp-content/uploads/2019/04/musica_electronica.jpg');
-        height: 200px;
+        height: 300px;
       "
     >
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
@@ -426,6 +420,7 @@
                 <h2 class="mb-3">Informacion de la cancion</h2>
                 <div class="song"></div>
               </div>
+              <article class="error"></article>
             </div>
           </div>
         </div>
@@ -438,7 +433,7 @@
       class="p-5 text-center bg-image"
       style="
         background-image: url('https://trabajarporelmundo.org/wp-content/uploads/2021/01/descargar-mu%CC%81sica-gratis-sin-copyright-1.jpg');
-        height: 200px;
+        height: 400px;
       "
     >
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
