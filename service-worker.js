@@ -67,3 +67,11 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+//Estrategia personalizada
+
+//Estrategia para actualizar el cache
+
+self.addEventListener("activate", (event) => {
+  event.respondWith();
+});
