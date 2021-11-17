@@ -73,5 +73,15 @@ self.addEventListener("fetch", (event) => {
 //Estrategia para actualizar el cache
 
 self.addEventListener("activate", (event) => {
-  event.respondWith();
+  event.respondWith(
+    caches.keys().then((resCache) =>
+      Promise.all(
+        resCache.map((resCache) => {
+          if (!cache_daniela_tellez.includes(resCache)) {
+            return caches.delete(resCache);
+          }
+        })
+      )
+    )
+  );
 });
