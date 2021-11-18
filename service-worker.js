@@ -1,22 +1,28 @@
-var cacheStatic = "cache-static-v1-danielat";
-var cacheDimanyc = "cache-dinamyc-v1-danielat";
+var cacheStatic = "cache-static-v2-danielat";
+var cacheDinamyc = "cache-dinamyc-v1-danielat";
 var cacheInmutable = "cache-inmutable-v1-danielat";
 
-self.addEventListener("install", function (event) {
+const files = [
+  "index.html",
+  "LICENSE",
+  "assets/js/main.js",
+  "assets/images/loader.svg",
+  "assets/images/iconMusicPage.png",
+  "assets/images/icons/icon-192x192.png",
+  "assets/images/icons/icon-256x256.png",
+  "assets/images/icons/icon-384x384.png",
+  "assets/images/icons/icon-512x512.png",
+  "assets/images/piano.jpg",
+  "assets/images/piano2.jpg",
+  "assets/images/audifonos.jpg",
+];
+const inmutable_files = [
+  "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js",
+];
+
+self.addEventListener("install", (event) => {
   console.log("install SW");
-  const files = [
-    "index.html",
-    "LICENSE",
-    "assets/js/main.js",
-    "assets/images/loader.svg",
-    "assets/images/piano.jpg",
-    "assets/images/piano2.jpg",
-    "assets/images/audifonos.jpg",
-  ];
-  const inmutable_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js",
-  ];
 
   const guardarCacheStatic = caches
     .open(cacheStatic)
@@ -77,24 +83,23 @@ self.addEventListener("fetch", (event) => {
       return respuestaRed || caches.match(event.request);
     })
   );
-});
+}); 
 
 //Estrategia personalizada
 
 //Estrategia para actualizar el cache
 
 self.addEventListener("activate", (event) => {
+  const cacheList = [cacheStatic, cacheInmutable, cacheDinamyc];
+
   console.log("Activado");
   event.waitUntil(
-    caches.keys().then((resCache) =>
-      Promise.all(
-        resCache.map((resCache) => {
-          if (!resCache.includes(cacheStatic)) {
-            console.log("Cache borrado");
-            return caches.delete(resCache);
-          }
-        })
-      )
+    caches.keys().then((cachesNames) =>
+      cachesNames.map((cacheName) => {
+        if (cacheList.indexOf(cacheName) === -1) {
+          return caches.delete(cacheName);
+        }
+      })
     )
   );
 });
@@ -106,7 +111,7 @@ self.addEventListener("activate", (event) => {
     return (
       respuestaCache ||
       fetch(event.request).then((respuestaRed) => {
-        caches.open(cacheDimanyc).then((cache) => {
+        caches.open(cacheDinamyc).then((cache) => {
           cache.put(event.request, respuestaRed.clone());
           return respuestaRed;
         });
